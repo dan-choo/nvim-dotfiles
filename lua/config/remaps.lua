@@ -30,6 +30,9 @@ vim.keymap.set("n", "<S-Tab>", ":if &modifiable && !&readonly && &modified <CR> 
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
+-- Lets you copy stuff -- ThePrimeagen
+vim.keymap.set("v", "<leader>y", "\"+y")
+
 
 -- Telescope remaps
 local builtin = require('telescope.builtin')
@@ -38,3 +41,5 @@ vim.keymap.set('n', '<leader>pg', builtin.git_files, {})
 vim.keymap.set('n', '<leader>ps', function()
     builtin.grep_string({ search = vim.fn.input("Grep > ") })
 end)
+
+
